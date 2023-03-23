@@ -1,0 +1,124 @@
+:root {
+  --white: #fff;
+  --gray: #c4c4c4;
+  --light-purple: #564ccf;
+  --dark-purple: #4c3fe2;
+}
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif , 'Rakkas';
+  direction: rtl;
+}
+body{
+  background:#5168b6;
+     
+}
+.slide {
+  display: flex;
+  height: 730px;
+  
+}
+
+.logo{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;
+}
+.rmd{
+  position: fixed;
+   top: 0;
+   width: 170px; /* ديد عرض الشريط */
+   background-color: #333; /* لون خلفية الشريط */
+   color: #fff; /* لون نص الشريط */
+   padding-top: 10px; /* تحديد المسافة بين الشعار وأول رابط في القائمة */
+   overflow-x: scroll;
+   z-index: 9999;
+   transition-duration: 0.5s; /* سرعة ظهور واختفاء الشريط */
+}
+ ul{ list-style:none ;/* إزالة نقاط قائمة الروابط في الشريط*/}
+ .rmd ul li a{
+ display:block ;/* جعل رابط كاملاً داخل div*/
+text-decoration:none ;/* إزالة أسفل خط رابط*/
+color:#fff ;/* لون نص رابط*/
+padding :5px ;/* إضافة هامش داخلى لروابط*/
+}
+ .rmd ul li a:hover{
+ background-color:#fff ;/* تغير لون خلفية رابط عند التأشير علىه*/
+color:#333 ;/*تغير لون نص رابظ عند التأشير علىه*/
+transition-duration:.5s ;/* سُــــــــــــــهولة اختفء وظهور أثناء التأثير
+ */  }
+ 
+.cards {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.card {
+  width: 142px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px 50px;
+  box-shadow: rgba(0,0,0,0.2) 0px 3px 10px -3px;
+  margin-right: 20px; 
+  padding: 25px;
+  margin: 15px;
+  transition: 0.7s ease;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .image {
+    opacity: 0.9;
+ }
+ .image img{
+    width: 100%
+}
+.text {
+    text-align: center;
+}
+
+.text h3{
+    color: #240019;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.main-btn {
+    color: #fff;
+    background-color: #5168b6;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: #5e3365;
+    transform: scale(1.1);
+}
+@media (max-width:1023px){
+  .cards{
+    flex-direction: column;
+    align-items: flex-end;
+  
+  }
+  .card{
+  padding: 15px;
+  margin: 10px;
+  
+  }
+  
+}
